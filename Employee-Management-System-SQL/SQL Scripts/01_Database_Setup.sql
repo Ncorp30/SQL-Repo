@@ -5,7 +5,8 @@
 -- Purpose   : Create the project database
 -- ==========================================
 
-CREATE DATABASE EmployeeManagementDB;
+IF DB_ID('EmployeeManagementDB') IS NULL
+    CREATE DATABASE EmployeeManagementDB;
 GO
 
 USE EmployeeManagementDB;
