@@ -6,7 +6,8 @@ USE EmployeeManagementDB;
 -- ==========================================
 
 SELECT DISTINCT City
-FROM Employees;
+FROM Employees
+ORDER BY City;
 
 -- ==========================================
 -- Question 2
