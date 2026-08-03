@@ -21,7 +21,7 @@ CREATE TABLE Employees
     LastName VARCHAR(50) NOT NULL,
     Gender VARCHAR(10) NOT NULL,
     DateOfBirth DATE NOT NULL,
-    Email VARCHAR(100) UNIQUE,
+    Email VARCHAR(100) NOT NULL UNIQUE,
     Phone VARCHAR(15),
     HireDate DATE NOT NULL,
     Salary DECIMAL(10,2) NOT NULL,
