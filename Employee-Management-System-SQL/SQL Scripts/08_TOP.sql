@@ -5,7 +5,7 @@ USE EmployeeManagementDB;
 -- Display the first 5 employees
 -- ==========================================
 
-SELECT TOP 5 EmployeeID, FirstName, LastName, Department, Salary, DateOfBirth
+SELECT TOP 5 EmployeeID, FirstName, LastName, DepartmentID, Salary, DateOfBirth
 FROM Employees;
 
 -- ==========================================
