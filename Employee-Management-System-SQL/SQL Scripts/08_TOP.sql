@@ -15,7 +15,7 @@ FROM Employees;
 
 SELECT TOP 10 *
 FROM Employees
-ORDER BY Salary DESC;
+ORDER BY Salary DESC, EmployeeID ASC;
 
 -- ==========================================
 -- Question 3
@@ -24,4 +24,4 @@ ORDER BY Salary DESC;
 
 SELECT TOP 3 *
 FROM Employees
-ORDER BY DateOfBirth DESC;
+ORDER BY DateOfBirth DESC, EmployeeID ASC;
