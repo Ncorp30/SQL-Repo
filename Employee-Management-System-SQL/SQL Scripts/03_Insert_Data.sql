@@ -4,6 +4,8 @@ USE EmployeeManagementDB;
 -- Insert Departments
 -- ==========================================
 
+BEGIN TRANSACTION;
+
 INSERT INTO Departments (DepartmentName)
 VALUES
 ('Human Resources'),
@@ -351,3 +353,5 @@ VALUES
 (48,8,'2024-03-30'),
 (49,9,'2024-06-15'),
 (50,10,'2024-01-20');
+
+COMMIT;
