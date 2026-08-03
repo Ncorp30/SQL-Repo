@@ -29,6 +29,18 @@ CREATE TABLE Employees
     DepartmentID INT NOT NULL,
     ManagerID INT NULL,
 
+    CONSTRAINT CK_Employees_Gender
+        CHECK (Gender IN ('Male', 'Female', 'Other')),
+
+    CONSTRAINT CK_Employees_DateOfBirth
+        CHECK (DateOfBirth <= GETDATE()),
+
+    CONSTRAINT CK_Employees_HireDate
+        CHECK (HireDate >= DateOfBirth),
+
+    CONSTRAINT CK_Employees_Salary
+        CHECK (Salary > 0),
+
     CONSTRAINT FK_Employees_Departments
         FOREIGN KEY (DepartmentID)
         REFERENCES Departments(DepartmentID),
