@@ -10,8 +10,6 @@ SELECT *
 FROM Employees
 ORDER BY Salary ASC;
 
-select * from Employees order by Salary ASC
-
 -- ==========================================
 -- Question 2
 -- Display all employees sorted by salary
