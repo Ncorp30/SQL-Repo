@@ -5,8 +5,12 @@
 -- Purpose   : Create the project database
 -- ==========================================
 
-IF DB_ID('EmployeeManagementDB') IS NULL
+BEGIN TRY
     CREATE DATABASE EmployeeManagementDB;
+END TRY
+BEGIN CATCH
+    IF ERROR_NUMBER() <> 1801 THROW;
+END CATCH
 GO
 
 USE EmployeeManagementDB;
