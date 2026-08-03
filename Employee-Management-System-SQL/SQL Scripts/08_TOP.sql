@@ -13,7 +13,7 @@ FROM Employees;
 -- Display the top 10 highest-paid employees
 -- ==========================================
 
-SELECT TOP 10 *
+SELECT TOP 10 EmployeeID, FirstName, LastName, DepartmentID, Salary, DateOfBirth
 FROM Employees
 ORDER BY Salary DESC;
 
