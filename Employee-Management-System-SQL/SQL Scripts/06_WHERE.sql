@@ -5,7 +5,7 @@ USE EmployeeManagementDB;
 -- Display all employees who belong to DepartmentID = 2
 -- ==========================================
 
-SELECT *
+SELECT EmployeeID, FirstName, LastName, DepartmentID, Salary, Gender, City, HireDate
 FROM Employees
 WHERE DepartmentID = 2;
 
@@ -15,7 +15,7 @@ WHERE DepartmentID = 2;
 -- Display all employees whose salary is greater than 70000
 -- ==========================================
 
-SELECT *
+SELECT EmployeeID, FirstName, LastName, DepartmentID, Salary, Gender, City, HireDate
 FROM Employees
 WHERE Salary > 70000;
 
@@ -24,7 +24,7 @@ WHERE Salary > 70000;
 -- Display all female employees
 -- ==========================================
 
-SELECT *
+SELECT EmployeeID, FirstName, LastName, DepartmentID, Salary, Gender, City, HireDate
 FROM Employees
 WHERE Gender = 'Female';
 
@@ -33,7 +33,7 @@ WHERE Gender = 'Female';
 -- Display all employees who live in Delhi
 -- ==========================================
 
-SELECT *
+SELECT EmployeeID, FirstName, LastName, DepartmentID, Salary, Gender, City, HireDate
 FROM Employees
 WHERE City = 'Delhi';
 
@@ -42,7 +42,7 @@ WHERE City = 'Delhi';
 -- Display all employees hired after 1 January 2022
 -- ==========================================
 
-SELECT *
+SELECT EmployeeID, FirstName, LastName, DepartmentID, Salary, Gender, City, HireDate
 FROM Employees
 WHERE HireDate > '2022-01-01';
 
@@ -52,7 +52,7 @@ WHERE HireDate > '2022-01-01';
 -- 50000 and 80000 (inclusive)
 -- ==========================================
 
-SELECT *
+SELECT EmployeeID, FirstName, LastName, DepartmentID, Salary, Gender, City, HireDate
 FROM Employees
 WHERE Salary BETWEEN 50000 AND 80000;
 
@@ -62,7 +62,7 @@ WHERE Salary BETWEEN 50000 AND 80000;
 -- and live in Delhi
 -- ==========================================
 
-SELECT *
+SELECT EmployeeID, FirstName, LastName, DepartmentID, Salary, Gender, City, HireDate
 FROM Employees
 WHERE DepartmentID = 2
   AND City = 'Delhi';
