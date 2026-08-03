@@ -4,7 +4,8 @@ USE EmployeeManagementDB;
 -- Insert Departments
 -- ==========================================
 
-BEGIN TRANSACTION;
+BEGIN TRY
+    BEGIN TRANSACTION;
 
 INSERT INTO Departments (DepartmentName)
 VALUES
@@ -354,4 +355,10 @@ VALUES
 (49,9,'2024-06-15'),
 (50,10,'2024-01-20');
 
-COMMIT;
+    COMMIT;
+END TRY
+BEGIN CATCH
+    IF @@TRANCOUNT > 0
+        ROLLBACK;
+    THROW;
+END CATCH;
