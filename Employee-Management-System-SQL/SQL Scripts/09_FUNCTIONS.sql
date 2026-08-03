@@ -59,7 +59,7 @@ FROM Employees;
 -- display 0 instead.
 -- ==========================================
 
-SELECT COALESCE(ManagerID, 0) AS Manager
+SELECT COALESCE(ManagerID, 0) AS ManagerIDOrDefault
 FROM Employees;
 
 -- ==========================================
@@ -68,7 +68,7 @@ FROM Employees;
 -- display 0 using ISNULL()
 -- ==========================================
 
-SELECT ISNULL(ManagerID, 0) AS Manager
+SELECT ISNULL(ManagerID, 0) AS ManagerIDOrDefault
 FROM Employees;
 
 -- ==========================================
