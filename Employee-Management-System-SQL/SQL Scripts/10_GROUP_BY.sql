@@ -6,6 +6,9 @@ USE EmployeeManagementDB;
 -- in each department
 -- ==========================================
 
+CREATE INDEX IX_Employees_DepartmentID
+ON Employees (DepartmentID);
+
 SELECT DepartmentID,
        COUNT(*) AS TotalEmployees
 FROM Employees
