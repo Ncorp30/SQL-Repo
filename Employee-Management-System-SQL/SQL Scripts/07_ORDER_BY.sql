@@ -10,7 +10,7 @@ SELECT *
 FROM Employees
 ORDER BY Salary ASC;
 
-select * from Employees order by Salary ASC
+select * from Employees order by Salary ASC;
 
 -- ==========================================
 -- Question 2
