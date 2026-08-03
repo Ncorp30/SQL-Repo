@@ -19,7 +19,7 @@ CREATE TABLE Employees
     EmployeeID INT PRIMARY KEY IDENTITY(1,1),
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
-    Gender VARCHAR(10) NOT NULL,
+    Gender VARCHAR(10) NOT NULL CONSTRAINT DF_Employees_Gender DEFAULT ('Male'),
     DateOfBirth DATE NOT NULL,
     Email VARCHAR(100) UNIQUE,
     Phone VARCHAR(15),
@@ -29,6 +29,15 @@ CREATE TABLE Employees
     DepartmentID INT NOT NULL,
     ManagerID INT NULL,
 
+    CONSTRAINT CK_Employees_Gender
+        CHECK (Gender IN ('Male', 'Female', 'Other')),
+
+    CONSTRAINT CK_Employees_Salary
+        CHECK (Salary > 0),
+
+    CONSTRAINT CK_Employees_DateOfBirth
+        CHECK (DateOfBirth < HireDate),
+
     CONSTRAINT FK_Employees_Departments
         FOREIGN KEY (DepartmentID)
         REFERENCES Departments(DepartmentID),
@@ -37,6 +46,14 @@ CREATE TABLE Employees
         FOREIGN KEY (ManagerID)
         REFERENCES Employees(EmployeeID)
 );
+GO
+
+CREATE NONCLUSTERED INDEX IX_Employees_DepartmentID
+    ON Employees (DepartmentID);
+GO
+
+CREATE NONCLUSTERED INDEX IX_Employees_ManagerID
+    ON Employees (ManagerID);
 GO
 
 -- ==========================================
