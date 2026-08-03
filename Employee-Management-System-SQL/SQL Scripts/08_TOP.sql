@@ -13,7 +13,7 @@ FROM Employees;
 -- Display the top 10 highest-paid employees
 -- ==========================================
 
-SELECT TOP 10 *
+SELECT TOP 10 EmployeeID, FirstName, LastName, Department, Salary, DateOfBirth
 FROM Employees
 ORDER BY Salary DESC;
 
@@ -22,6 +22,6 @@ ORDER BY Salary DESC;
 -- Display the top 3 youngest employees
 -- ==========================================
 
-SELECT TOP 3 *
+SELECT TOP 3 EmployeeID, FirstName, LastName, Department, Salary, DateOfBirth
 FROM Employees
 ORDER BY DateOfBirth DESC;
