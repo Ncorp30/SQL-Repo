@@ -4,7 +4,11 @@ USE EmployeeManagementDB;
 -- SELECT - Practice 1
 -- ==========================================
 
-SELECT *
+SELECT EmployeeID,
+       FirstName,
+       LastName,
+       DepartmentID,
+       Salary
 FROM Employees;
 
 -- ==========================================
